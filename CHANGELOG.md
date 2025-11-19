@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - [x] refactoring: switch `match-partial` check method from regexp to substring
 
+### Fixed
+
+- [x] fix: clarify `data-lh` attribute element query selector to anchor element
+
 ## [1.0.0] - 2017-06-25
 
 - Initial release

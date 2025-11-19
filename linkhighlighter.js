@@ -27,7 +27,7 @@
          */
         var highlightScope = function (scopeElement) {
             var scopeHighlightClass = scopeElement.getAttribute('data-lh-class') || 'g-lh-active';
-            var anchorElementList = scopeElement.querySelectorAll('[data-lh]');
+            var anchorElementList = scopeElement.querySelectorAll('a[data-lh]');
 
             anchorElementList.forEach(function (anchorElement) {
                 // this code is not complicated too strict to validate option value is correct.
