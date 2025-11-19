@@ -47,15 +47,13 @@
             });
         };
 
-        /**
-         * Main function
-         */
         this.highlight = function () {
             var scopeElementList = document.querySelectorAll('[data-lh-scope]');
 
             // if at least one scope was not defined, root element as only scope will be used.
             if (0 === scopeElementList.length) {
-                scopeElementList = document.querySelectorAll('html');
+                highlightScope(document.querySelector('html'));
+                return;
             }
 
             scopeElementList.forEach(highlightScope);
