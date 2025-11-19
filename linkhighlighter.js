@@ -36,13 +36,14 @@
 
                 if ((anchorElementOption === 'match-domain' && anchorElement.host === window.location.host) ||
                     (anchorElementOption === 'match-uri' && anchorElement.href === window.location.href) ||
-                    (anchorElementOption === 'match-partial' && (new RegExp('^' + anchorElement.href, 'i')).test(window.location.href))
+                    (anchorElementOption === 'match-partial' && window.location.href.toLowerCase().startsWith(anchorElement.href.toLowerCase()))
                 ) {
                     anchorElement.classList.add(scopeHighlightClass);
-                } else {
-                    // this code removes class name added past time.
-                    anchorElement.classList.remove(scopeHighlightClass);
+                    return;
                 }
+
+                // remove class name added earlier
+                anchorElement.classList.remove(scopeHighlightClass);
             });
         };
 

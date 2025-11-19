@@ -8,11 +8,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 ### Added
 
-+ Tests
-+ DOM & URI changes watch
-+ Default class name, URI match option configuration 
-+ Browsers compatibility table
+- Tests
+- DOM & URI changes watch
+- Default class name, URI match option configuration
 
-## 1.0.0 - 2017-06-25
+### Changed
+
+- [x] refactoring: switch `match-partial` check method from regexp to substring
+
+## [1.0.0] - 2017-06-25
 
 - Initial release
+
+[1.0.0]: https://github.com/unsektor/linkhighlighter/releases/tag/1.0.0
