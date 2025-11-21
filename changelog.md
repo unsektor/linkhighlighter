@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [ ] DOM & URI changes watch
 - [ ] Default class name, URI match option configuration
 
+## [1.2.1] - 2025-11-22
+### Changed
+
+- [x] hotfix: static assets path for built package
+
 ## [1.2.0] - 2025-11-22
 ### Added
 
@@ -32,6 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
+[1.2.1]: https://github.com/unsektor/linkhighlighter/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/unsektor/linkhighlighter/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/unsektor/linkhighlighter/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/unsektor/linkhighlighter/releases/tag/1.0.0

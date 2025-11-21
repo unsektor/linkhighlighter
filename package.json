@@ -1,6 +1,6 @@
 {
   "name": "linkhighlighter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Tiny library to highlight active link on web page",
   "homepage": "https://проекты.unsektor.com/linkhighlighter.js/",
   "scripts": {
