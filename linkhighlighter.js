@@ -2,10 +2,10 @@
  *  linkhighlighter.js - Tiny library to highlight active link on web page.
  *
  *  @author     Михаил Драгункин <contact@unsektor.com>
- *  @url        https://github.com/unsektor/linkhighlighter.js/
+ *  @url        https://github.com/unsektor/linkhighlighter/
  *  @license    ISC
  *  @since      June 25, 2017
- *  @ver 	    1.0.0
+ *  @ver        1.0.0
  */
 
 ;(function (root, factory) {

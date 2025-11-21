@@ -4,7 +4,7 @@ Tiny native javascript library to highlight current URI link.
 
 ## Installation
 
-```bash
+```sh
 npm i --save linkhighlighter
 ```
 
@@ -15,10 +15,11 @@ Include script into your project and execute code right after DOM loaded.
 
 ```html
 <!-- ... -->
-<script src="/static/assets/vendor/unsektor/linkhighlighter.js"></script>
+<script src="https://unpkg.com/linkhighlighter@1/linkhighlighter.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', function (e) {
-    linkhighlighter.highlight();
+    var linkhighlighterInstance = new linkhighlighter();
+    linkhighlighterInstance.highlight();
 });
 </script>
 </body>
@@ -27,25 +28,40 @@ window.addEventListener('DOMContentLoaded', function (e) {
 
 ### Include in frontend application
 
-```js
-// AMD
-define(['linkhighlighter'], function (linkhighlighter) {
-  linkhighlighter.highlight();
-})
-
-// ES6 / ES2015 module
-import linkhighlighter from 'linkhighlighter'
-
-// CommonJS
-var linkhighlighter = require('unsektor/linkhighlighter');
-
-// Property of window object
-window.linkhighlighter.highlight();
-// ... or simply
-linkhighlighter.highlight();
-```
-
-Notice: this code assumes that DOM is loaded.
+1. Include into an application
+   ```js
+   // AMD
+   define(['linkhighlighter'], function (linkhighlighter) {
+     // Initialize
+     var linkhighlighterInstance = new linkhighlighter();
+     
+     // Invoke
+     linkhighlighterInstance.highlight();
+   })
+   
+   // ES6 / ES2015 module
+   import linkhighlighter from 'linkhighlighter'
+   
+   // CommonJS
+   var linkhighlighter = require('linkhighlighter');
+   ```
+2. Initialize
+   ```js
+   // Property of window object
+   var linkhighlighterInstance = new window.linkhighlighter();
+   // ... or simply
+   var linkhighlighterInstance = new linkhighlighter();
+   ```
+3. Invoke
+   ```js
+   // Direct call
+   linkhighlighterInstance.highlight();
+   
+   // ... Better this way (wait unitil DOM loaded):
+   window.addEventListener('DOMContentLoaded', function(e) {
+       linkhighlighterInstance.highlight();
+   });
+   ```
 
 ## Markup
 
@@ -126,8 +142,8 @@ By default script highlights elements with `data-lh` attribute comparing element
 
 *Notice: Combination value is not sensetive to space, case or tag order.*
 
-+ `match-domain match-uri`
-+ `match-domain match-child` 
+- `match-domain match-uri`
+- `match-domain match-child` 
 
 </div>
 
@@ -237,7 +253,7 @@ Result CSS code.
 ```
 
 <details>
-  <summary>**Final example code:**</summary>
+  <summary><strong>Final example code:</strong></summary>
 
 ```html
 <!-- ... -->

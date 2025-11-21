@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - [x] fix: clarify `data-lh` attribute element query selector to anchor element
+- [x] fix: update documentation issues
 
 ## [1.0.0] - 2017-06-25
 
