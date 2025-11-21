@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [ ] DOM & URI changes watch
 - [ ] Default class name, URI match option configuration
 
+### Changed
+
+- [x] hotfix: static assets path for built package
+
 ## [1.2.0] - 2025-11-22
 ### Added
 
