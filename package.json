@@ -1,13 +1,13 @@
 {
   "name": "linkhighlighter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tiny library to highlight active link on web page",
   "main": "linkhighlighter.js",
   "homepage": "https://проекты.unsektor.com/linkhighlighter.js/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Михаил Драгункин <contact@unsektor.com>",
+  "author": "Михаил Драгункин <contact@md.land>",
   "license": "ISC",
   "repository": {
     "type": "git",
