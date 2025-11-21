@@ -1,6 +1,6 @@
 # License (ISC)
 
-Copyright (c) 2017, Михаил Драгункин (contact@unsektor.com)
+Copyright (c) 2017, Михаил Драгункин (contact@md.land)
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above

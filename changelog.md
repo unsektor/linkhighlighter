@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 ### Added
 
-- [ ] Cover with unit-tests
+- [x] feature: convert JavaScript to TypeScript
+- [x] feature: add Github CI/CD workflow configuration
+- [x] enhancement: cover with unit-tests
 - [ ] DOM & URI changes watch
 - [ ] Default class name, URI match option configuration
 
