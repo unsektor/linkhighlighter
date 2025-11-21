@@ -1,31 +1,22 @@
 # linkhighlighter.js
 
-Tiny native javascript library to highlight current URI link.
+Tiny library to highlight current URI link.
 
 ## Installation
+
+Install with npm:
 
 ```sh
 npm i --save linkhighlighter
 ```
 
-## Usage
-### Direct include
+or yarn:
 
-Include script into your project and execute code right after DOM loaded.
-
-```html
-<!-- ... -->
-<script src="https://unpkg.com/linkhighlighter@1/linkhighlighter.js"></script>
-<script>
-window.addEventListener('DOMContentLoaded', function (e) {
-    var linkhighlighterInstance = new linkhighlighter();
-    linkhighlighterInstance.highlight();
-});
-</script>
-</body>
-<!-- ... -->
+```sh
+yarn add linkhighlighter
 ```
 
+## Usage
 ### Include in frontend application
 
 1. Include into an application
@@ -62,6 +53,23 @@ window.addEventListener('DOMContentLoaded', function (e) {
        linkhighlighterInstance.highlight();
    });
    ```
+
+### Direct include
+
+Include script into your project and execute code right after DOM loaded.
+
+```html
+<!-- ... -->
+<script src="https://unpkg.com/linkhighlighter@1/linkhighlighter.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function (e) {
+    var linkhighlighterInstance = new linkhighlighter();
+    linkhighlighterInstance.highlight();
+});
+</script>
+</body>
+<!-- ... -->
+```
 
 ## Markup
 
@@ -305,5 +313,5 @@ Result CSS code.
 2. script uses `classList` DOM API & HTML5 custom data attributes.
 3. script does not validate passed options.
 
-## [Change Log](CHANGELOG.md)
-## [License](LICENSE.md)
+## [Change Log](changelog.md)
+## [License](license)

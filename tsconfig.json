@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "target": "ES2015",
+    "lib": ["ES2015", "DOM"],
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "types": ["jest", "node"],
+  "exclude": [
+    "node_modules",
+    "src/**/_*.ts"
+  ],
+  "include": [
+    "src",
+    "tests"
+  ],
+}

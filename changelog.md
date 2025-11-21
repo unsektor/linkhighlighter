@@ -8,9 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 ### Added
 
-- [ ] Cover with unit-tests
 - [ ] DOM & URI changes watch
 - [ ] Default class name, URI match option configuration
+
+## [1.2.0] - 2025-11-22
+### Added
+
+- [x] feature: convert JavaScript to TypeScript
+- [x] feature: add Github CI/CD workflow configuration
+- [x] enhancement: cover with unit-tests
 
 ## [1.1.0] - 2025-11-22
 ### Changed
@@ -26,5 +32,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
+[1.2.0]: https://github.com/unsektor/linkhighlighter/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/unsektor/linkhighlighter/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/unsektor/linkhighlighter/releases/tag/1.0.0
