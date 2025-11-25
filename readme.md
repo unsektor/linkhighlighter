@@ -25,14 +25,14 @@ yarn add linkhighlighter
    define(['linkhighlighter'], function (linkhighlighter) {
      // Initialize
      var linkhighlighterInstance = new linkhighlighter();
-     
+
      // Invoke
      linkhighlighterInstance.highlight();
    })
-   
+
    // ES6 / ES2015 module
    import linkhighlighter from 'linkhighlighter'
-   
+
    // CommonJS
    var linkhighlighter = require('linkhighlighter');
    ```
@@ -40,38 +40,73 @@ yarn add linkhighlighter
    ```js
    // Property of window object
    var linkhighlighterInstance = new window.linkhighlighter();
-   // ... or simply
+   // ... or global:
    var linkhighlighterInstance = new linkhighlighter();
    ```
 3. Invoke
    ```js
    // Direct call
    linkhighlighterInstance.highlight();
-   
+
    // ... Better this way (wait unitil DOM loaded):
    window.addEventListener('DOMContentLoaded', function(e) {
        linkhighlighterInstance.highlight();
    });
    ```
 
-### Direct include
+### Include from CDN
 
-Include script into your project and execute code right after DOM loaded.
+1. Include script from CDN:
 
-```html
-<!-- ... -->
-<script src="https://unpkg.com/linkhighlighter@1/linkhighlighter.js"></script>
-<script>
-window.addEventListener('DOMContentLoaded', function (e) {
-    var linkhighlighterInstance = new linkhighlighter();
-    linkhighlighterInstance.highlight();
-});
-</script>
-</body>
-<!-- ... -->
-```
+   Both ESM and UMD pre-built version are hosted on CDN`s:
 
-## Markup
+   - <details><summary>UNPKG (ESM)</summary>
+
+     ```html
+     <script src="https://unpkg.com/linkhighlighter@1.2.1/dist/linkhighlighter.esm.js"></script>
+     ```
+
+     > [!WARNING]
+     > Since version 1.2.0, pre-built script is placed under `./dist/` directory with `.umd` or `.esm` postfix in file.
+     >
+     > Before:
+     >
+     > ```
+     > https://unpkg.com/linkhighlighter@1.2/linkhighlighter.js
+     > ```
+     >
+     > After (one of):
+     >
+     > ```
+     > https://unpkg.com/linkhighlighter@1.2/dist/linkhighlighter.umd.js
+     > https://unpkg.com/linkhighlighter@1.2/dist/linkhighlighter.esm.js
+     > ```
+
+     </details>
+   - <details><summary>JSDelivr (ESM)</summary>
+
+     ```html
+     <script src="https://cdn.jsdelivr.net/npm/linkhighlighter@1.2.1/dist/linkhighlighter.esm.js"></script>
+     ```
+
+  </details>
+
+2. Include script into your project and execute code right after DOM loaded.
+   ```html
+   <!-- ... -->
+   <script>
+   import linkhighlighter from 'linkhighlighter';
+
+   window.addEventListener('DOMContentLoaded', function (e) {
+       var linkhighlighterInstance = new linkhighlighter();
+       linkhighlighterInstance.highlight();
+   });
+   </script>
+   </body>
+   <!-- ... -->
+   ```
+
+## Documentation
 
 Markup defines just only 3 custom HTML5 attributes.
 
@@ -115,14 +150,15 @@ It's enough to highlight current URI link elements.
 
 #### `data-lh` values (options)
 
-By default script highlights elements with `data-lh` attribute comparing element uri with current uri. There few options to extend functionality.
+By default, script highlights elements with `data-lh` attribute comparing element uri with current uri.
+There few options to extend functionality.
 
 <table>
     <thead>
         <tr>
             <td><b>Option</b></td>
             <td><b>Compare method</b></td>
-            <td><b>Description<b/></td>
+            <td><b>Description</b></td>
         </tr>
     </thead>
     <tbody>
@@ -148,10 +184,10 @@ By default script highlights elements with `data-lh` attribute comparing element
 
 #### Possible option combinations
 
-*Notice: Combination value is not sensetive to space, case or tag order.*
+*Notice: Combination value is not sensitive to space, case or tag order.*
 
 - `match-domain match-uri`
-- `match-domain match-child` 
+- `match-domain match-child`
 
 </div>
 
@@ -190,7 +226,8 @@ Code within linkhighlighter markup (after):
 
 ### 2. `data-lh-scope` (optional attribute)
 
-`data-lh-scope` attribute applies to element to define scope that contains anchor (`<a>`) elements to be highlighted. It's usefull to segregate few link blocks (eg. navigation blocks). (See `data-lh-class` below for more details). 
+`data-lh-scope` attribute applies to element to define scope that contains anchor (`<a>`) elements to be highlighted.
+It's useful to segregate few link blocks (e.g. navigation blocks). (See `data-lh-class` below for more details).
 
 **Scope element definition example:**
 
@@ -208,7 +245,9 @@ Note: if at least one scope was not defined, document root element (`<html>`) wi
 
 ### 3. `data-lh-class` (optional attribute)
 
-`data-lh-class` attribute defines scope classname for highlighted anchor element. This attribute applies only for scope element (DOM element that contains `data-lh-scope` attribute). It's useful to define specific highlighted element class name in scope.
+`data-lh-class` attribute defines scope classname for highlighted anchor element.
+This attribute applies only for scope element (DOM element that contains `data-lh-scope` attribute).
+It's useful to define specific highlighted element class name in scope.
 
 `g-lh-active` is default class name to highlight link element (if `data-lh-class` for scope was not defined).
 
@@ -224,10 +263,10 @@ This feature provides compatibility with [BEM methodology](https://en.bem.info/)
         // Case 1. (without default class name definition for scope)
         // You have to define styles for default class name selector.
         // In BEM using case it's a dirty hack.
-        &.g-lh-active { 
+        &.g-lh-active {
             // ...
         }
-        
+
         // Case 2. (BEM ok)
         &_active {
             // ...
@@ -241,7 +280,7 @@ Result CSS code.
 ```css
 /* CSS Code*/
 
-/* Case 1 result */ 
+/* Case 1 result */
 .header-navigation__item.g-lh-active {/* ... */}
 
 /* Case 2 result */
@@ -307,9 +346,10 @@ Result CSS code.
 
 </details>
 
-## Notes & restrictions 
+## Notes & restrictions
 
-1. Currently, library does not watch DOM & URI changes, if your application manages it, it's simple to update state by simply calling main library method: `highlight`.
+1. Currently, library does not watch DOM & URI changes, if your application manages it,
+   it's simple to update state by simply calling main library method: `highlight`.
 2. script uses `classList` DOM API & HTML5 custom data attributes.
 3. script does not validate passed options.
 

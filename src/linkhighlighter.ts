@@ -5,7 +5,7 @@
  * @url     https://github.com/unsektor/linkhighlighter/
  * @license ISC
  * @since   June 25, 2017
- * @ver     1.2.1
+ * @ver     1.2.2
  */
 
 export default class {

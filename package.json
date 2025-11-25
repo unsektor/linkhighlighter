@@ -1,14 +1,13 @@
 {
   "name": "linkhighlighter",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Tiny library to highlight active link on web page",
   "homepage": "https://проекты.unsektor.com/linkhighlighter.js/",
   "scripts": {
-    "build": "webpack --mode=production",
-    "dev": "webpack --mode=development --watch",
-    "build:dev": "webpack --mode=development",
+    "build": "yarn run clean && webpack --mode=production",
+    "dev": "yarn run clean && webpack --mode=development --watch",
+    "build:dev": "yarn run clean && webpack --mode=development",
     "clean": "rimraf dist",
-    "prepublishOnly": "npm run clean && npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -44,6 +43,7 @@
       "default": "./dist/linkhighlighter.umd.js"
     }
   },
+  "types": "dist/linkhighlighter.d.ts",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",

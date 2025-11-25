@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [ ] DOM & URI changes watch
 - [ ] Default class name, URI match option configuration
 
+## [1.2.2] - 2025-11-25
+### Added
+
+- [x] feature: add library declaration file
+
+### Changed
+
+- [x] documentation: update CDN usage examples
+- [x] fix: CI/CD workflow (to avoid building twice)
+
 ## [1.2.1] - 2025-11-22
 ### Changed
 
@@ -37,6 +47,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial release
 
+[1.2.1]: https://github.com/unsektor/linkhighlighter/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/unsektor/linkhighlighter/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/unsektor/linkhighlighter/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/unsektor/linkhighlighter/compare/1.0.0...1.1.0
