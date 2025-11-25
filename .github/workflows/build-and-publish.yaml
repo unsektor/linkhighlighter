@@ -32,17 +32,13 @@ jobs:
         run: yarn run test:coverage
 
       - name: Build package
-        run: | 
-          yarn run build
-          mv dist/linkhighlighter.esm.js dist/linkhighlighter.umd.js .
-          cp linkhighlighter.umd.js linkhighlighter.js
-          rm -rf dist
+        run: yarn run build
 
       - name: Verify build
         run: |
           echo "Build artifacts:"
-          ls -la ./
-          du -h ./*.js
+          ls -la dist/
+          du -h dist/*.js
 
       - name: Publish to NPM
         run: npm publish
