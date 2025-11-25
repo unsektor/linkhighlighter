@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - [x] hotfix: static assets path for built package
+- [x] documentation: update CDN usage examples
 
 ## [1.2.0] - 2025-11-22
 ### Added
