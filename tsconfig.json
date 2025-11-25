@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist",
     "strict": true,
     "noImplicitAny": true,
     "target": "ES2015",
@@ -11,10 +13,10 @@
   "types": ["jest", "node"],
   "exclude": [
     "node_modules",
-    "src/**/_*.ts"
+    "src/**/_*.ts",
+    "tests"
   ],
   "include": [
-    "src",
-    "tests"
+    "src"
   ],
 }

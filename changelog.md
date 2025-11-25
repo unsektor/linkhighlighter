@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - [ ] DOM & URI changes watch
 - [ ] Default class name, URI match option configuration
+- [x] feature: add library declaration file
 
 ### Changed
 

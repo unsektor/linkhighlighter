@@ -43,6 +43,7 @@
       "default": "./dist/linkhighlighter.umd.js"
     }
   },
+  "types": "dist/linkhighlighter.d.ts",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",
